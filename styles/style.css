@@ -1,0 +1,308 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* _______________________headder_______________________ */
+header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 7.1rem;
+    padding: 1.9rem 3rem;
+    background-color: hsl(0, 0%, 100%);
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #000000;
+    box-shadow: .0rem .2rem .6rem .1rem rgba(0, 0, 0, 0.25);
+}
+
+header>div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+header>div:first-child>p{
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    line-height: 0.9rem;
+}
+
+header>div:first-child>p>b{
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.475rem;
+}
+
+header>div:nth-child(2){
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+header>div:nth-child(2)>img{
+    padding-left: 0.4rem;
+    height: 0.6rem;
+    width: 1.1rem;
+}
+
+header>div:last-child{
+    margin-left: 3rem;
+}
+
+.position{
+    position: relative;
+}
+
+.position__absolute{
+    position: absolute;
+    box-shadow: .2rem .2rem .6rem .1rem rgba(0, 0, 0, 0.25);
+    width: 6.1rem;
+    background-color: #E6E6E6;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    gap: 0.1rem;
+    top: 2rem;
+}
+
+.position__absolute>li{
+    padding: 0.5rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 1.0rem;
+    color: #000000;
+    background: #FFFFFF;
+}
+
+.position__absolute>li:hover{
+    background: #FFF6E6;
+    color: #FFA500;
+}
+
+/* _______________________Main_______________________ */
+main {
+    padding-top:7.1rem;
+    background-color: hsl(0, 0%, 96%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    /* gap: 6.1rem; */
+}
+
+main>section{
+    background-color: hsl(0, 0%, 100%);
+
+    width: 66.3rem;
+    padding: 1.6rem 3rem 1.9rem 3rem;
+}
+
+.superior{
+    background-image: url(../assets/background.png);
+    background-repeat: no-repeat;
+    background-position: 100% 1.6rem; /* 90 es desplazamiento horizontal, pero no termino de entender respecto de que */
+    background-size: 34rem;
+    height: 37.5rem;
+}
+
+.superior__textoPrincipal>h2{
+    font-weight: 400;
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+}
+
+main h2>b{
+    font-weight: 700;
+    color: #FFA500;
+}
+
+.superior__textoPrincipal--gris{
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #808080;
+    width: 31.1rem;
+}
+
+/* _______________________Main parte inferior_______________________ */
+
+.textoSecundario>h4{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    color: #000000;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1.9rem;
+}
+
+.textoSecundario__container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.textoSecundario__container>div{
+    border: .1rem solid #FFA500;
+    border-radius: 3rem;
+    width: 18.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.9rem 1.4rem;
+}
+
+.textoSecundario__container>div:nth-child(2){
+    background: #FFF6E5;
+    border: none;
+}
+
+
+.textoSecundario__container>div>img{
+    margin-bottom: 2.5rem;
+}
+
+.textoSecundario__container>div>h5{
+    margin-bottom: 1rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #000000;
+}
+
+.textoSecundario__container>div>p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #999999;
+}
+
+/* _______________________Aside_______________________ */
+
+
+main>aside{
+    background-color: antiquewhite;
+    width: 30rem;
+    padding: 2.9rem;
+    background-color: #FEFEFE;
+    margin-bottom: .2rem;
+    justify-content: center;
+}
+
+main>aside>h3{
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    color: #000000;
+    margin-bottom: 1.1rem;
+}
+
+.toDo{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    background-color: #CCCCCC;
+    gap: 0.1rem;
+}
+
+.toDo>span{
+    padding-top: 2.3rem;
+    background-color: #FEFEFE;
+    height: 100%;
+}
+
+.toDo>span>h6{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #000000;
+    padding-bottom: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+.toDo>span>h6>i{
+    display: inline-block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.6rem;
+    line-height: 0.9rem;
+    color: #FFA500;
+    padding: 0.2rem 1.1rem;
+    background: #FFF6E6;
+    border: 0.02rem solid #FFA500;
+    border-radius: 2.0rem;
+    margin-left: 0.7rem;
+}
+
+.toDo>span>p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #999999;
+    padding-bottom: .8rem;
+}
+
+.toDo>span>div{
+    display:flex;
+    justify-content: end;
+    gap: 0.324rem;
+    margin-bottom: 2.119rem;
+}
+
+
+
+/* _______________________Footer_______________________ */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+    padding: 0rem 1.6rem;
+    height: 4rem;
+    box-shadow: .0rem .2rem .6rem .1rem rgb(0 0 0 / 25%);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+    color: #999999;
+}
+
+footer>span{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}

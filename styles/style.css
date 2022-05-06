@@ -67,19 +67,41 @@ header>div:last-child{
     position: relative;
 }
 
-.position__absolute{
+.position__checkbox{
+    display: none;
+}
+
+.position__button{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.position__button>{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.position__menu{
+    max-height: 0rem;
+    overflow: hidden;
     position: absolute;
-    box-shadow: .2rem .2rem .6rem .1rem rgba(0, 0, 0, 0.25);
     width: 6.1rem;
-    background-color: #E6E6E6;
     display: grid;
     grid-template-rows: repeat(3, auto);
     align-items: center;
-    gap: 0.1rem;
     top: 2rem;
+    transition: max-height 0.1s linear 0s;
 }
 
-.position__absolute>li{
+.position__checkbox:checked ~ .position__menu{
+    max-height: 6.2rem;
+    box-shadow: .2rem .2rem .6rem .1rem rgba(0, 0, 0, 0.25);
+    transition: max-height 0.1s linear 0s;
+}
+
+.position__menu>li{
     padding: 0.5rem;
     font-family: 'Inter';
     font-style: normal;
@@ -88,9 +110,14 @@ header>div:last-child{
     line-height: 1.0rem;
     color: #000000;
     background: #FFFFFF;
+    border-top: 0.1rem solid #E6E6E6;
 }
 
-.position__absolute>li:hover{
+.position__menu>li:first-child{
+    border-top: none;
+}
+
+.position__menu>li:hover{
     background: #FFF6E6;
     color: #FFA500;
 }
@@ -118,7 +145,7 @@ main>section{
 .superior{
     background-image: url(../assets/background.png);
     background-repeat: no-repeat;
-    background-position: 100% 1.6rem; /* 90 es desplazamiento horizontal, pero no termino de entender respecto de que */
+    background-position: 100% 1.6rem;
     background-size: 34rem;
     height: 37.5rem;
 }
@@ -224,20 +251,28 @@ main>aside>h3{
 }
 
 .toDo{
-    display: grid;
+/*     display: grid;
     grid-template-rows: repeat(3, auto);
     align-items: center;
     background-color: #CCCCCC;
-    gap: 0.1rem;
+    gap: 0.1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.toDo>span{
+.toDo>article{
     padding-top: 2.3rem;
     background-color: #FEFEFE;
     height: 100%;
+    border-top: 1px solid #CCCCCC;
 }
 
-.toDo>span>h6{
+.toDo>article:first-child{
+    border-top: none;
+}
+
+.toDo>article>h6{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -249,7 +284,7 @@ main>aside>h3{
     align-items: center;
 }
 
-.toDo>span>h6>i{
+.toDo>article>h6>i{
     display: inline-block;
     font-family: 'Inter';
     font-style: normal;
@@ -264,7 +299,7 @@ main>aside>h3{
     margin-left: 0.7rem;
 }
 
-.toDo>span>p{
+.toDo>article>p{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -274,7 +309,7 @@ main>aside>h3{
     padding-bottom: .8rem;
 }
 
-.toDo>span>div{
+.toDo>article>div{
     display:flex;
     justify-content: end;
     gap: 0.324rem;

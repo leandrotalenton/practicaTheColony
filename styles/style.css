@@ -101,6 +101,15 @@ header>div:last-child{
     transition: max-height 0.1s linear 0s;
 }
 
+.position__button>img{
+    transition: transform 0.1s linear 0s;
+}
+
+.position__checkbox:checked ~ .position__button>img{
+    transform: rotate(180deg);
+    transition: transform 0.1s linear 0s;
+}
+
 .position__menu>li{
     padding: 0.5rem;
     font-family: 'Inter';

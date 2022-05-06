@@ -102,12 +102,12 @@ header>div:last-child{
 }
 
 .position__button>img{
-    transition: transform 0.1s linear 0s;
+    transition: transform 0.2s linear 0s;
 }
 
 .position__checkbox:checked ~ .position__button>img{
     transform: rotate(180deg);
-    transition: transform 0.1s linear 0s;
+    transition: transform 0.2s linear 0s;
 }
 
 .position__menu>li{
